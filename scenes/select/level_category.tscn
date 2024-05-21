@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://bm15ylj4fyl5k"]
+
+[ext_resource type="Script" path="res://scenes/select/level_category.gd" id="1_mftoa"]
+[ext_resource type="FontFile" uid="uid://cn73q4gq2rdc4" path="res://assets/font.ttf" id="2_8qhxe"]
+
+[node name="LevelCategory" type="Control"]
+custom_minimum_size = Vector2(0, 192)
+layout_mode = 3
+anchors_preset = 0
+offset_bottom = 192.0
+script = ExtResource("1_mftoa")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 347.0
+offset_bottom = 64.0
+theme_override_fonts/font = ExtResource("2_8qhxe")
+theme_override_font_sizes/font_size = 36
+text = "    Text"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 0
+offset_top = 64.0
+offset_right = 1920.0
+offset_bottom = 192.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer"]
+layout_mode = 2

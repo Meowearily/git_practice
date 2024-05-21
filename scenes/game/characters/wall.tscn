@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bpnlv34r3tukc"]
+
+[ext_resource type="Script" path="res://scenes/game/characters/floor.gd" id="1_oopny"]
+[ext_resource type="Texture2D" uid="uid://dxmygqhu4gdxg" path="res://assets/wall.png" id="2_n2r3k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ehtqe"]
+size = Vector2(120, 120)
+
+[node name="Wall" type="StaticBody2D"]
+script = ExtResource("1_oopny")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_n2r3k")
+centered = false
+region_filter_clip_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(64, 64)
+shape = SubResource("RectangleShape2D_ehtqe")

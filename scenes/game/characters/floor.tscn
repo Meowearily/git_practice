@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bmpyoqu8eb5tf"]
+
+[ext_resource type="Script" path="res://scenes/game/characters/floor.gd" id="1_dirbd"]
+[ext_resource type="Texture2D" uid="uid://de0u8r3rrr5vc" path="res://assets/floor.png" id="2_ig6ns"]
+
+[node name="Floor" type="StaticBody2D"]
+script = ExtResource("1_dirbd")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_ig6ns")
+centered = false
+region_rect = Rect2(304, 16, 16, 16)

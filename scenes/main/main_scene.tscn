@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=3 uid="uid://2f3f504by11o"]
+
+[ext_resource type="Script" path="res://scenes/main/main_scene.gd" id="1_4e77g"]
+[ext_resource type="FontFile" uid="uid://cn73q4gq2rdc4" path="res://assets/font.ttf" id="2_6exhg"]
+[ext_resource type="PackedScene" uid="uid://dvej7522jt7pg" path="res://scenes/main/play_button.tscn" id="3_gj5mp"]
+[ext_resource type="PackedScene" uid="uid://utd5kyjst5au" path="res://scenes/main/settings_button.tscn" id="4_xnl36"]
+[ext_resource type="PackedScene" uid="uid://cpcp5hefa8llg" path="res://scenes/main/quit_button.tscn" id="4_yudiu"]
+
+[node name="MainScene" type="Node2D"]
+script = ExtResource("1_4e77g")
+
+[node name="Walls" type="Node2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+offset_right = 1920.0
+offset_bottom = 1080.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.525643, 0.741232, 0.485512, 1)
+
+[node name="BoxContainer" type="BoxContainer" parent="."]
+offset_left = 720.0
+offset_top = 270.0
+offset_right = 1200.0
+offset_bottom = 810.0
+size_flags_horizontal = 0
+size_flags_vertical = 6
+alignment = 1
+vertical = true
+
+[node name="SokobanLabel" type="Label" parent="BoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_6exhg")
+theme_override_font_sizes/font_size = 64
+text = "Sokoban"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PlayButton" parent="BoxContainer" instance=ExtResource("3_gj5mp")]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+
+[node name="SettingsButton" parent="BoxContainer" instance=ExtResource("4_xnl36")]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+
+[node name="QuitButton" parent="BoxContainer" instance=ExtResource("4_yudiu")]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
